@@ -167,6 +167,11 @@ def compile_changelog(releases):
     return markdown.markdown(changelog)
 
 
+def release_is_prerelease(release):
+    """Treat SemVer prereleases as prereleases even when GitHub metadata is wrong."""
+    return bool(release.get("prerelease")) or release["version"].prerelease is not None
+
+
 def select_update_zip_asset(assets, version):
     """Return the browser download URL for the exact Windows portable zip asset."""
     expected = f"P99LoginProxy-{version}.zip"
@@ -320,7 +325,7 @@ def on_releases_fetched_main_thread(releases, notify_no_update):
         return
 
     prerelease_ok = config.APP_VERSION.prerelease or config.OPT_INTO_PRERELEASES
-    visible_releases = releases if prerelease_ok else [r for r in releases if not r["prerelease"]]
+    visible_releases = releases if prerelease_ok else [r for r in releases if not release_is_prerelease(r)]
 
     config.CHANGELOG = compile_changelog(visible_releases)
     top_window = QApplication.activeWindow()
