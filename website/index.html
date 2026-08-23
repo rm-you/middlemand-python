@@ -31,8 +31,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>EverQuest Project1999 Single Sign On Login Proxy</h1>
-                <p>A lightweight, cross-platform login proxy for Project 1999 EverQuest servers. Drop in replacement for <b>middlemand</b> while adding groundbreaking login management features.</p>
+                <h1>EverQuest Project1999 Single-Sign-On Login Proxy</h1>
+                <p>A lightweight, cross-platform replacement for <b>middlemand</b> with shared accounts, local password management, aliases, tags, and character tracking.</p>
                 <a href="https://github.com/eq-p99-tools/p99-login-proxy/releases/latest" class="btn btn-primary">Download Now</a>
             </div>
             <div class="hero-image">
@@ -47,8 +47,8 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
-                    <h3>Secure</h3>
-                    <p>Safely manage your guild shared EverQuest credentials (or your own list of local accounts) with SSO login.</p>
+                    <h3>Shared SSO Accounts</h3>
+                    <p>Use guild-managed EverQuest accounts without distributing their real usernames and passwords.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
@@ -57,8 +57,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Lightning-Fast</h3>
-                    <p>Quickly log in to any account without looking up usernames or passwords!</p>
+                    <h3>Characters, Aliases, and Tags</h3>
+                    <p>Quickly log in to the right account using your character name, customized aliases, and class/role tags.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💻</div>
@@ -66,9 +66,9 @@
                     <p>Works on both Windows and Linux.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>System Tray</h3>
-                    <p>Finally be rid of that annoying blank terminal window -- minimizes to system tray!</p>
+                    <div class="feature-icon">🔑</div>
+                    <h3>Local Password Management</h3>
+                    <p>Manage personal accounts and aliases locally (credentials never leave your machine).</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
@@ -107,21 +107,21 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Download & Install</h3>
-                        <p>Download the latest version from the link above and extract it to your preferred location. It will attempt to locate your EverQuest directory automatically, but if it is non-standard then you may need to put the application executable inside the EverQuest directory.</p>
+                        <p>Download the latest release and extract it to your preferred location. The proxy will locate your EverQuest installation automatically when possible, or you can select the directory from the Advanced tab.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Configuration</h3>
-                        <p>Run the application and paste your API Token (in Discord, run "/sso get"). You may need to go to the Advanced tab and click Refresh Cache the first time.</p>
+                        <p>Run the application, select your SSO server, and paste the API Token provided by the Discord <code>/sso get</code> command. Your accounts, aliases, tags, and characters will synchronize automatically. SSO is optional: personal accounts can be added under SSO → Local Accounts.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Start Playing</h3>
-                        <p>Click the "Launch EQ" button (or start the game however you normally do) and simply log in with guild bot's name or role with <i>any password</i>, even just a single letter. Passwords don't matter anymore! For example:</p>
+                        <p>Click "Launch EverQuest" (or start the game normally), then log in with an available SSO account, alias, tag, or character name using any password. Local accounts and aliases use the password saved in the proxy.</p>
                         <img src="images/login_screenshot.png" class="screenshot" alt="Login Example">
                     </div>
                 </div>

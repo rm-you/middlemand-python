@@ -1,6 +1,6 @@
 # P99 Login Proxy Website
 
-This is a simple, modern website for the P99 Login Proxy application. The website is designed to promote the tool and provide users with download links and basic setup instructions.
+This is the static website for the P99 Login Proxy application. It describes the current Python release, links to native 2.0 prereleases, and provides download and setup instructions.
 
 ## Structure
 
@@ -9,19 +9,15 @@ This is a simple, modern website for the P99 Login Proxy application. The websit
 - `js/main.js` - JavaScript for smooth scrolling and other interactive elements
 - `images/` - Directory for website images
 
-## Customization
+## Updating
 
-### Adding Screenshots
+### Screenshots
 
-Replace the placeholder `images/screenshot.png` with actual screenshots of the application.
+Keep `images/screenshot.png` synchronized with the current stable proxy UI. `images/login_screenshot.png` shows the in-game login example.
 
-### Updating Content
+### Release Content
 
-The website includes placeholder text in several areas that should be updated:
-
-1. Setup instructions can be expanded in the "Setup Instructions" section
-2. Feature descriptions can be modified to match the current functionality
-3. Download links currently point to the GitHub releases page
+When commands or setup steps change, update `index.html` alongside the application documentation. Stable downloads use GitHub's latest-release link; native 2.0 previews use the releases page so the link does not depend on a specific release candidate.
 
 ## Deployment
 
