@@ -171,10 +171,11 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 0.9;
     padding-right: 40px;
 }
 
@@ -191,7 +192,7 @@ nav ul li a:hover {
 }
 
 .hero-image {
-    flex: 1;
+    flex: 1.1;
     display: flex;
     justify-content: center;
 }
@@ -325,9 +326,14 @@ footer {
     }
     
     .hero-content {
+        flex: initial;
         padding-right: 0;
         margin-bottom: 40px;
         text-align: center;
+    }
+
+    .hero-image {
+        flex: initial;
     }
     
     .feature-grid {
