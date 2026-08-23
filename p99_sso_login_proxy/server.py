@@ -511,7 +511,10 @@ class LoginProxy(asyncio.DatagramProtocol):
                 return
 
         elif opcode == soe.TransportOp.Ack:
-            logger.debug("Forwarding server ACK to client (cs_offset=%d)", self.session.cs_offset)
+            if not self.session.cs_offset:
+                logger.debug("Skipping ordinary standalone server ACK")
+                return
+            logger.debug("Forwarding translated post-retry server ACK (cs_offset=%d)", self.session.cs_offset)
             self.session.adjust_server_ack(data, start_index)
 
         logger.debug("Forwarding processed packet to client")

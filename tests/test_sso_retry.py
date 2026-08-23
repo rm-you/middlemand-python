@@ -487,6 +487,15 @@ def test_post_retry_standalone_server_ack_is_translated(login_proxy):
     assert soe.get_sequence(out) == 1, "Ack(2) must be translated to Ack(1)"
 
 
+def test_ordinary_standalone_server_ack_is_suppressed(login_proxy):
+    proxy = login_proxy
+    raw_ack = bytearray(struct.pack(">HH", soe.TransportOp.Ack, 6))
+
+    proxy.handle_server_packet(raw_ack)
+
+    assert _client_sends(proxy) == []
+
+
 def test_session_disconnect_resets_retry_state(login_proxy):
     proxy = login_proxy
     proxy._sso_original_login = bytes(_make_login_combined("user", "userpass"))
